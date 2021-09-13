@@ -28,6 +28,7 @@ exports.typedef = gql`
     name: String
     # this is commment
     content: String
+    
   }
 `;
 
