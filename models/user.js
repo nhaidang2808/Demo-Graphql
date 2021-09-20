@@ -1,7 +1,7 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var noteSchema = new Schema({
+const noteSchema = new Schema({
   name: {
     type: String,
     required: true
@@ -11,6 +11,21 @@ var noteSchema = new Schema({
     required: false
   }
 });
-var Model = mongoose.model('Note', noteSchema);
+
+const userSchema = new Schema({
+  user: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  token: {
+    type: String
+  }
+})
+const Model = mongoose.model('Note', noteSchema);
+const userModel = mongoose.model('User', userSchema);
 module.exports = Model;
-// Commit
+module.exports = userModel;
