@@ -28,7 +28,13 @@ exports.typedef = gql`
     name: String
     # this is commment
     content: String
-    
+  }
+
+  type UserType {
+    id: String
+    name: String
+    password: String
+    token: String
   }
 `;
 
